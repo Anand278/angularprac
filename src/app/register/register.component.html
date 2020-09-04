@@ -1,0 +1,54 @@
+<div class="container-fluid bgimg">
+    <div class="row">
+        <!-- 1st column-->
+        <div class="col-12 col-md-4 col-sm-4 col-xs-12"></div>
+        <!--2nd column-->
+        <div class=" col-12 col-md-4 col-sm-4 col-xs-12 ">
+            <!--form -->
+            <div class="main-form rounded">
+            <h1 class="h1Id">REGISTER HERE</h1>
+            <div class="form-group">
+                 <!--  FORM CONTROL 1-->
+                <input type="text" class="form-control" id="name" placeholder="Enter User Name" [formControl]="username" required />
+            </div>
+            <div class="form-group">
+                 <!--  FORM CONTROL 1-->
+                <input type="email" class="form-control  " id="EmailId" placeholder="Enter  EmailID" [formControl]="email" required />  
+            </div>
+            
+            <div class="form-group">
+                 <!--  FORM CONTROL 1-->
+                <input type="password" class="form-control" id="PasswordId" placeholder=" Enter Password" [formControl]="password" required />
+            </div>
+            
+            <div class="form-group">
+                 <!--  FORM CONTROL 1-->
+                <input type="password" class="form-control" id="ConfirmPasswordId" placeholder=" Confirm Password" [formControl]="confirmpassword" required />
+            </div>
+
+            <div class="form-group d-flex justify-content-between">
+                <input type="checkbox" class="form-check-input" id="CheckboxReId" style="margin-left:1px ;">
+                <label class="form-checkbox " for="checkbox" id="chkid">I Agree all statements in Terms of Service </label>
+            </div>
+             <!--  FORM CONTROL 1-->
+            <button (click)="addregister()" type="submit" class="btn btn-success btn-block rounded-pill">SIGN-UP</button>
+
+        </div>
+            <div class="text-center rounded">
+                <h4 class="h4Id">Have already an account ?</h4>
+                <!-- <a href="login.component.html" role="button" type="submit" class="btn btn-success rounded-pill" id="loginbtn">LOGIN</a> -->
+                <a routerLink="/login" role="button" type="submit" class="btn btn-success rounded-pill" id="loginbtn">LOGIN</a>
+            </div>
+        </div>
+         <!-- 3rd column-->
+
+         <!--  FORM CONTROL UPDATES-->
+         <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+
+            <div>
+                <div *ngFor="let item of registerlist">{{ item }}</div>
+            </div>
+
+         </div>
+    </div>
+</div>

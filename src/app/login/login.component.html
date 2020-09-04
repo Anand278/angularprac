@@ -1,0 +1,45 @@
+<div class="container-fluid bgimg">
+    <div class="row">
+        <!-- 1st column-->
+        <div class="col-12 col-md-4 col-sm-4 col-xs-12"></div>
+        <!--2nd column-->
+        <div class=" col-12 col-md-4 col-sm-4 col-xs-12 ">
+            <!--form -->
+        <div class="main-form rounded">
+            <h1 class="h1">Login Form</h1>
+            <div class="form-group">
+                <label class="email" for="Email">Email</label>
+                 <!--form control 1-->
+                <input type="email" class="form-control" id="InputEmailId" placeholder="Email" [formControl]="Email" required />
+            </div>
+
+            <div class="form-group">
+                <label class="password" for="Password">Password</label>
+                   <!--form control 1-->
+                    <input type="password" class="form-control" id="InputPasswordId" placeholder="Password" [formControl]="password" required/>
+            </div>
+
+            <div class="form-group d-flex justify-content-between">
+                <input type="checkbox" class="form-check-input" id="CheckboxReId">
+                <label class="form-checkbox " for="checkbox">Remember Me</label>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="forgetlink text-light">Forget password ?</a>
+            </div>
+            <!--form control 1-->
+            <button type="reset" (click)="addsubmit()" class="btn btn-success btn-block rounded-pill">Submit</button>
+        
+        </div>
+
+            <div class="text-center rounded">
+                <h4>You are not a member ?</h4>
+                <!-- <a href="register.component.html" role="button" type="submit" class="btn btn-success rounded-pill">REGISTER NOW</a> -->
+                <a routerLink="/register" role="button" type="submit" class="btn btn-success rounded-pill">REGISTER NOW</a>
+            </div>
+
+        </div>
+        <!-- 3st column-->
+            <div class="col-12 col-md-4 col-sm-4 col-xs-12">
+            </div>
+    </div>
+</div>
+
+    
